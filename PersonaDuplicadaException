@@ -1,0 +1,9 @@
+package util;
+
+public class PersonaDuplicadaException extends Exception {
+    private static final long serialVersionUID = 1L;
+
+    public PersonaDuplicadaException(String correo) {
+        super("Error: Ya existe una persona registrada con el correo: " + correo);
+    }
+}

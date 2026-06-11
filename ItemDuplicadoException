@@ -1,0 +1,9 @@
+package util;
+
+public class ItemDuplicadoException extends Exception {
+    private static final long serialVersionUID = 1L;
+
+    public ItemDuplicadoException(String codigo) {
+        super("Error: El código de ítem '" + codigo + "' ya se encuentra registrado en el inventario.");
+    }
+}

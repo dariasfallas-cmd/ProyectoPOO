@@ -1,0 +1,9 @@
+package util;
+
+public class PersonaNoEncontradaException extends Exception {
+    private static final long serialVersionUID = 1L;
+
+    public PersonaNoEncontradaException(String correo) {
+        super("Error: No se encontró ninguna persona con el correo: " + correo);
+    }
+}

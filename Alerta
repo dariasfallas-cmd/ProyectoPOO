@@ -1,0 +1,5 @@
+package Logica;
+
+import java.util.Date;
+
+public class Alerta {

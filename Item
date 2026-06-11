@@ -4,3 +4,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Item {
+private String codigo; 
+	    private String nombre;
+	    private String descripcion;
+	    private Tipo tipo;
+	    private List<Categoria> categorias; 
+	    private List<Prestamo> historialPrestamos;
+
+	    public Item(String codigo, String nombre, String descripcion, Tipo tipo, List<Categoria> categorias) {
+	        this.codigo = codigo;
+	        this.nombre = nombre;
+	        this.descripcion = descripcion;
+	        this.tipo = tipo;
+	        this.categorias = categorias != null ? categorias : new ArrayList<>();
+	        this.historialPrestamos = new ArrayList<>();
+	    }
+
+	    public String getCodigo() { return codigo; }
+	    public void setCodigo(String codigo) { this.codigo = codigo; }
+
+	    public String getNombre() { return nombre; }
+	    public void setNombre(String nombre) { this.nombre = nombre; }
+
+	    public String getDescripcion() { return descripcion; }
+	    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+
+	    public Tipo getTipo() { return tipo; }
+	    public void setTipo(Tipo tipo) { this.tipo = tipo; }
+
+	    public List<Categoria> getCategorias() { return categorias; }
+	    public void setCategorias(List<Categoria> categorias) { this.categorias = categorias; }
+
+	    public List<Prestamo> getHistorialPrestamos() { return historialPrestamos; }
+
+	    
+	    public void agregarPrestamoAlHistorial(Prestamo prestamo) {
+	        if (prestamo != null && !this.historialPrestamos.contains(prestamo)) {
+	            this.historialPrestamos.add(prestamo);
+	        }
+	    }
+}

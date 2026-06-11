@@ -3,3 +3,42 @@ package Logica;
 import java.util.Date;
 
 public class Alerta {
+
+	    private String idAlerta;
+	    private Date fechaGeneracion;
+	    private int diasRetraso;
+	    private Prestamo prestamoAsociado;
+
+	    public Alerta(String idAlerta, Date fechaGeneracion, int diasRetraso, Prestamo prestamoAsociado) {
+	        this.idAlerta = idAlerta;
+	        this.fechaGeneracion = fechaGeneracion;
+	        this.diasRetraso = diasRetraso;
+	        this.prestamoAsociado = prestamoAsociado;
+	    }
+  public String getIdAlerta() { return idAlerta; }
+	    public void setIdAlerta(String idAlerta) { this.idAlerta = idAlerta; }
+
+	    public Date getFechaGeneracion() { return fechaGeneracion; }
+	    public void setFechaGeneracion(Date fechaGeneracion) { this.fechaGeneracion = fechaGeneracion; }
+
+	    public int getDiasRetraso() { return diasRetraso; }
+	    public void setDiasRetraso(int diasRetraso) { this.diasRetraso = diasRetraso; }
+
+	    public Prestamo getPrestamoAsociado() { return prestamoAsociado; }
+	    public void setPrestamoAsociado(Prestamo prestamoAsociado) { this.prestamoAsociado = prestamoAsociado; }
+
+	    
+	    public String getNombreMoroso() {
+	        if (this.prestamoAsociado != null && this.prestamoAsociado.getSolicitante() != null) {
+	            return this.prestamoAsociado.getSolicitante().getNombre();
+	        }
+	        return "N/A";
+	    }
+
+	    public int getCantidadItemsRetenidos() {
+	        if (this.prestamoAsociado != null && this.prestamoAsociado.getItemsPrestados() != null) {
+	            return this.prestamoAsociado.getItemsPrestados().size();
+	        }
+	        return 0;
+	    }
+}

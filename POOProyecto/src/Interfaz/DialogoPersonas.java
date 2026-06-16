@@ -1,15 +1,17 @@
 package Interfaz;
 
-import Logica.Controladora;
-import Logica.Personas;
-import Logica.Prestamo;
-import Logica.Alerta;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import logica.Alerta;
+import logica.Controladora;
+import logica.Persona;
+import logica.Prestamo;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;

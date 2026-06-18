@@ -2,22 +2,17 @@ package Interfaz;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JDialog;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import logica.Alerta;
-import logica.Controladora;
-import logica.Persona;
-import logica.Prestamo;
-
 import javax.swing.JLabel;
-import javax.swing.JTextField;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
 public class DialogoPersonas extends JDialog {
 
@@ -88,7 +83,7 @@ public class DialogoPersonas extends JDialog {
 		JButton btnGuardar = new JButton("Guardar");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// Controladora.getInstancia().registrarPersona(...)
+				
 			}
 		});
 		buttonPane.add(btnGuardar);

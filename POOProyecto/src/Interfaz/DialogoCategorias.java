@@ -31,7 +31,7 @@ public class DialogoCategorias extends JDialog {
 	}
 
 	public DialogoCategorias() {
-		setTitle("Administración de Categorías - WallRose");
+		setTitle("Categorías");
 		setBounds(100, 100, 480, 380); 
 		
 		getContentPane().setLayout(new BorderLayout());

@@ -34,7 +34,7 @@ public class DialogoPersonas extends JDialog {
 	}
 
 	public DialogoPersonas() {
-		setTitle("Administración de Personas - WallRose");
+		setTitle("Personas");
 		setBounds(100, 100, 480, 380); 
 		
 		getContentPane().setLayout(new BorderLayout());
